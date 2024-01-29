@@ -1,6 +1,4 @@
 ﻿using Feature.Account;
-using Foundation.ApiExtensions.Controllers;
-using Foundation.Extensions.Exceptions;
 using Foundation.Localization;
 using Identity.Api.Areas.Accounts.ApiRequestModels;
 using Identity.Api.Areas.Accounts.Services.UserServices;
@@ -20,7 +18,7 @@ using System.Threading.Tasks;
 namespace Identity.Api.Areas.Accounts.ApiControllers
 {
     [Area("Accounts")]
-    public class IdentityApiController : BaseApiController
+    public class IdentityApiController : ControllerBase
     {
         private readonly IUserService userService;
         private readonly IUsersService usersService;

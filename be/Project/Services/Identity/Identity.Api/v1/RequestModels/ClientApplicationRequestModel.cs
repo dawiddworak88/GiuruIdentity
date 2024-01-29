@@ -1,9 +1,10 @@
-﻿using Foundation.ApiExtensions.Models.Request;
+﻿using System;
 
 namespace Identity.Api.v1.RequestModels
 {
-    public class ClientApplicationRequestModel : RequestModelBase
+    public class ClientApplicationRequestModel
     {
+        public Guid? Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string ContactJobTitle { get; set; }

@@ -1,9 +1,10 @@
-﻿using Foundation.ApiExtensions.Models.Request;
+﻿using System;
 
 namespace Identity.Api.v1.RequestModels
 {
-    public class TeamMemberRequestModel : RequestModelBase
+    public class TeamMemberRequestModel
     { 
+        public Guid? Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

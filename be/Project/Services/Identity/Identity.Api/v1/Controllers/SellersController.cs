@@ -1,5 +1,4 @@
-﻿using Foundation.ApiExtensions.Controllers;
-using Identity.Api.Services.Organisations;
+﻿using Identity.Api.Services.Organisations;
 using Identity.Api.ServicesModels.Organisations;
 using Identity.Api.v1.ResponseModels;
 using Identity.Api.Validators;
@@ -17,7 +16,7 @@ namespace Identity.Api.v1.Controllers
     [Produces("application/json")]
     [Authorize]
     [ApiController]
-    public class SellersController : BaseApiController
+    public class SellersController : ControllerBase
     {
         private readonly IOrganisationService organisationService;
 

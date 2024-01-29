@@ -1,5 +1,4 @@
 ﻿using Foundation.Account.Definitions;
-using Foundation.ApiExtensions.Controllers;
 using Foundation.Extensions.Definitions;
 using Foundation.Extensions.Exceptions;
 using Foundation.Extensions.Helpers;
@@ -23,7 +22,7 @@ namespace Identity.Api.v1.Controllers
     [Produces("application/json")]
     [Authorize(AuthenticationSchemes = "IsToken" )]
     [ApiController]
-    public class OrganisationsController : BaseApiController
+    public class OrganisationsController : ControllerBase
     {
         private readonly IOrganisationService organisationService;
 

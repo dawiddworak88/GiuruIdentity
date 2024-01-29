@@ -1,5 +1,4 @@
-﻿using Foundation.ApiExtensions.Controllers;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Threading.Tasks;
@@ -12,7 +11,7 @@ namespace Identity.Api.v1.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     [AllowAnonymous]
     [ApiController]
-    public class TokenController : BaseApiController
+    public class TokenController : ControllerBase
     {
         private readonly ITokenService tokenService;
 

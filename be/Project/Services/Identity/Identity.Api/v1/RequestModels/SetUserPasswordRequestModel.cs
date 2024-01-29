@@ -1,5 +1,4 @@
-﻿using Foundation.ApiExtensions.Models.Request;
-using System;
+﻿using System;
 
 namespace Identity.Api.v1.RequestModels
 {

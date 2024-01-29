@@ -1,5 +1,4 @@
 ﻿using Foundation.Account.Definitions;
-using Foundation.ApiExtensions.Controllers;
 using Foundation.Extensions.Definitions;
 using Foundation.Extensions.Exceptions;
 using Foundation.Extensions.ExtensionMethods;
@@ -27,7 +26,7 @@ namespace Identity.Api.v1.Controllers
     [Produces("application/json")]
     [Authorize(AuthenticationSchemes = "IsToken")]
     [ApiController]
-    public class TeamMembersController : BaseApiController
+    public class TeamMembersController : ControllerBase
     {
         private readonly ITeamMemberService teamMemberService;
 

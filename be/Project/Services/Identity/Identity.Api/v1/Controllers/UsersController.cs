@@ -1,5 +1,4 @@
-﻿using Foundation.ApiExtensions.Controllers;
-using Foundation.Extensions.Definitions;
+﻿using Foundation.Extensions.Definitions;
 using Foundation.Extensions.Exceptions;
 using Identity.Api.Services.Users;
 using Identity.Api.ServicesModels.Users;
@@ -19,7 +18,7 @@ namespace Identity.Api.v1.Controllers
     [Produces("application/json")]
     [Authorize(AuthenticationSchemes = "IsToken")]
     [ApiController]
-    public class UsersController : BaseApiController
+    public class UsersController : ControllerBase
     {
         private readonly IUsersService userService;
 

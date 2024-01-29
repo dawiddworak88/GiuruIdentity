@@ -1,5 +1,4 @@
-﻿using Foundation.ApiExtensions.Controllers;
-using Foundation.Extensions.Definitions;
+﻿using Foundation.Extensions.Definitions;
 using Foundation.Extensions.Exceptions;
 using Identity.Api.Services.Roles;
 using Identity.Api.ServicesModels.Roles;
@@ -18,7 +17,7 @@ namespace Identity.Api.v1.Controllers
     [Produces("application/json")]
     [Authorize(AuthenticationSchemes = "IsToken")]
     [ApiController]
-    public class RolesController : BaseApiController
+    public class RolesController : ControllerBase
     {
         private readonly IRolesService rolesService;
 
