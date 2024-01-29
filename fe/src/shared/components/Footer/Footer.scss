@@ -1,0 +1,20 @@
+.footer {
+    .navbar {
+        background-color: $primary;
+        
+        .navbar-item {
+            
+            a {
+                color: $white;
+
+                &:hover {
+                    color: $grey-light;
+                }
+            }
+        }
+    }
+
+    .content {
+        padding-bottom: 1rem;
+    }
+}
