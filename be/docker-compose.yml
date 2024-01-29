@@ -45,3 +45,4 @@ services:
       - sqldata
       - redis
       - account-web-react-ssr
+      - otel-collector
