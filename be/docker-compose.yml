@@ -1,6 +1,26 @@
 version: '3.9'
 
 services:
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    restart: unless-stopped
+    depends_on:
+      - jaeger
+      - prometheus
+      - loki
+
+  prometheus:
+    image: prom/prometheus:latest
+    restart: unless-stopped
+
+  loki:
+    image: grafana/loki:latest
+    restart: unless-stopped
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    restart: unless-stopped
+
   sqldata:
     image: mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     restart: unless-stopped
@@ -11,7 +31,7 @@ services:
   account-web-react-ssr:
     image: ${REGISTRY:-giuru}/account-web-react-ssr:${PLATFORM:-linux}-${TAG:-latest}
     build: 
-      context: ../fe/projects/Account
+      context: ../fe
       dockerfile: Dockerfile-ssr-local
     restart: unless-stopped
 

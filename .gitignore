@@ -230,4 +230,4 @@ log-*.txt
 *.rsa
 
 # BE
-be/src/.env
+be/.env
