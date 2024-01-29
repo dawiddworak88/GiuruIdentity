@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  sqldata:
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Gre@tPassw0rd
+    ports:
+      - "5433:1433"
+    volumes:
+      - mssqldata:/var/opt/mssql
+
+  redis:
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/data
+
+  account-web-react-ssr:
+    environment: 
+      NODE_ENV: development
+    volumes:
+      - ../fe/projects/Account/server:/home/node/account-web-react-ssr/server
+      - ../fe/projects/Account/src:/home/node/account-web-react-ssr/src
+
+  identity-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5105:80"
+
+volumes:
+  mssqldata:
+    external: false
+  redis:
+    external: false
