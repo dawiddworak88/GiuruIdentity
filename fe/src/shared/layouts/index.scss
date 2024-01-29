@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 // Import variables
-@import "../../../../../shared/layouts/_variables";
+@import "./_variables";
 
 // Import only what you need from Bulma
 @import "~bulma/sass/utilities/_all.sass";
@@ -20,4 +20,4 @@
 @import "~react-toastify/dist/ReactToastify.css";
 
 // Import global styles
-@import "../../../../../shared/layouts/global.scss";
+@import "./global.scss";
